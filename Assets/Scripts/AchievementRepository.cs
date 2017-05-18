@@ -26,7 +26,7 @@ public class AchievementRepository :MonoBehaviour
 		}
 	}
 
-	public void SaveAchievement( int score, string scoreName, List<TokuModel> tokuList )
+	public void SaveAchievement( int score, string scoreName, List<int> tokuList )
 	{
 		Achievement saveAchievement = LoadAchievement ();
 
@@ -37,9 +37,9 @@ public class AchievementRepository :MonoBehaviour
 			saveAchievement.highScoreName = scoreName;
 		}
 
-		foreach(TokuModel tm in tokuList )
+		foreach(int id in tokuList )
 		{
-			saveAchievement.achievedIdList.Add (tm.getId ());
+			saveAchievement.achievedIdList.Add (id);
 		}
 
 		SaveData.SetClass<Achievement> ("p1", saveAchievement);

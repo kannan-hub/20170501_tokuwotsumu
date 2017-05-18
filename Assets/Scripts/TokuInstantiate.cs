@@ -153,7 +153,7 @@ public class TokuInstantiate :MonoBehaviour
 		string rarity = tm.GetRarity ();
 		if (rarity == "srare"  || rarity == "rare")
 		{
-			gameCol.getTokuList.Add (tm);
+			gameCol.aquiredTokuAchievementIdList.Add (tm.GetId());
 		}
 		
 	}

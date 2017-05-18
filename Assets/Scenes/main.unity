@@ -229,8 +229,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659c6d2d31bd6484fbe6e00005a2a0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  achievementid: 0
-  myname: 
+  achievementId: 0
+  myName: 
   rarity: normal
   acquired: 0
 --- !u!1 &11961048
@@ -459,8 +459,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659c6d2d31bd6484fbe6e00005a2a0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  achievementid: 0
-  myname: 
+  achievementId: 0
+  myName: 
   rarity: normal
   acquired: 0
 --- !u!1 &49057207
@@ -938,8 +938,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659c6d2d31bd6484fbe6e00005a2a0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  achievementid: 0
-  myname: 
+  achievementId: 0
+  myName: 
   rarity: normal
   acquired: 0
 --- !u!1 &128151280
@@ -1379,8 +1379,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659c6d2d31bd6484fbe6e00005a2a0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  achievementid: 0
-  myname: 
+  achievementId: 0
+  myName: 
   rarity: normal
   acquired: 0
 --- !u!1001 &328039802
@@ -1624,8 +1624,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659c6d2d31bd6484fbe6e00005a2a0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  achievementid: 0
-  myname: 
+  achievementId: 0
+  myName: 
   rarity: normal
   acquired: 0
 --- !u!1 &359090211
@@ -1963,8 +1963,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659c6d2d31bd6484fbe6e00005a2a0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  achievementid: 0
-  myname: 
+  achievementId: 0
+  myName: 
   rarity: normal
   acquired: 0
 --- !u!1 &467218352
@@ -2169,8 +2169,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659c6d2d31bd6484fbe6e00005a2a0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  achievementid: 0
-  myname: 
+  achievementId: 0
+  myName: 
   rarity: normal
   acquired: 0
 --- !u!1 &560124528
@@ -2302,12 +2302,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e917b40aeb7fbfa49b2ba926c69d1327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tokuParents: {fileID: 746146457}
-  _tokuRareParents: {fileID: 1004950310}
-  _tokuSRareParents: {fileID: 1577962127}
-  _gamecol: {fileID: 1056253032}
-  rareRatio: 33
-  srareRatio: 33
+  tokuParents: {fileID: 746146457}
+  tokuRareParents: {fileID: 1004950310}
+  tokuSRareParents: {fileID: 1577962127}
+  gameCol: {fileID: 1056253032}
+  rareRatio: 5
+  srareRatio: 1
 --- !u!1 &598007483
 GameObject:
   m_ObjectHideFlags: 0
@@ -2509,8 +2509,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659c6d2d31bd6484fbe6e00005a2a0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  achievementid: 0
-  myname: 
+  achievementId: 0
+  myName: 
   rarity: normal
   acquired: 0
 --- !u!1 &622068751
@@ -2757,8 +2757,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659c6d2d31bd6484fbe6e00005a2a0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  achievementid: 0
-  myname: 
+  achievementId: 0
+  myName: 
   rarity: normal
   acquired: 0
 --- !u!1001 &705911795
@@ -2997,8 +2997,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659c6d2d31bd6484fbe6e00005a2a0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  achievementid: 0
-  myname: 
+  achievementId: 0
+  myName: 
   rarity: normal
   acquired: 0
 --- !u!1001 &745865610
@@ -3652,8 +3652,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659c6d2d31bd6484fbe6e00005a2a0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  achievementid: 0
-  myname: 
+  achievementId: 0
+  myName: 
   rarity: normal
   acquired: 0
 --- !u!1 &816576163
@@ -3794,8 +3794,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659c6d2d31bd6484fbe6e00005a2a0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  achievementid: 0
-  myname: 
+  achievementId: 0
+  myName: 
   rarity: normal
   acquired: 0
 --- !u!1 &853496439
@@ -4050,8 +4050,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659c6d2d31bd6484fbe6e00005a2a0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  achievementid: 0
-  myname: 
+  achievementId: 0
+  myName: 
   rarity: normal
   acquired: 0
 --- !u!1 &933865979
@@ -4244,8 +4244,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659c6d2d31bd6484fbe6e00005a2a0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  achievementid: 0
-  myname: 
+  achievementId: 0
+  myName: 
   rarity: normal
   acquired: 0
 --- !u!1 &984517853
@@ -4426,8 +4426,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659c6d2d31bd6484fbe6e00005a2a0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  achievementid: 0
-  myname: 
+  achievementId: 0
+  myName: 
   rarity: normal
   acquired: 0
 --- !u!1 &1004950310
@@ -4508,16 +4508,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 009e62d4d9c5795419ea92024d4edf56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOver: 0
+  gameover: 0
   score: 0
-  gameoverTime: 15
+  gameoverTime: 10
   remainingTime: 0
   kaimyoResult: 
-  getTokuList: []
+  aquiredTokuAchievementIdList: 
   remainingTimeText: {fileID: 248530578}
   scoreText: {fileID: 2021983208}
-  gameOverObj: {fileID: 128151280}
-  gameOverText: {fileID: 59727966}
+  gameoverObj: {fileID: 128151280}
+  gameoverText: {fileID: 59727966}
   resultText: {fileID: 766368236}
   youText: {fileID: 560124530}
   kaimyoText: {fileID: 1139189703}
@@ -4576,7 +4576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c2cd6855c691514d84ea9263ee3ae0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gamecol: {fileID: 1056253032}
+  gameCol: {fileID: 1056253032}
 --- !u!61 &1073479158
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4790,8 +4790,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659c6d2d31bd6484fbe6e00005a2a0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  achievementid: 0
-  myname: 
+  achievementId: 0
+  myName: 
   rarity: normal
   acquired: 0
 --- !u!1001 &1126004839
@@ -5033,8 +5033,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659c6d2d31bd6484fbe6e00005a2a0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  achievementid: 0
-  myname: 
+  achievementId: 0
+  myName: 
   rarity: normal
   acquired: 0
 --- !u!1 &1139189701
@@ -5319,8 +5319,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659c6d2d31bd6484fbe6e00005a2a0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  achievementid: 0
-  myname: 
+  achievementId: 0
+  myName: 
   rarity: normal
   acquired: 0
 --- !u!4 &1192406139
@@ -6019,8 +6019,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659c6d2d31bd6484fbe6e00005a2a0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  achievementid: 0
-  myname: 
+  achievementId: 0
+  myName: 
   rarity: normal
   acquired: 0
 --- !u!1001 &1693472660
@@ -6325,8 +6325,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659c6d2d31bd6484fbe6e00005a2a0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  achievementid: 0
-  myname: 
+  achievementId: 0
+  myName: 
   rarity: normal
   acquired: 0
 --- !u!1 &1739864065
@@ -6533,8 +6533,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659c6d2d31bd6484fbe6e00005a2a0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  achievementid: 0
-  myname: 
+  achievementId: 0
+  myName: 
   rarity: normal
   acquired: 0
 --- !u!1 &1825765660
@@ -6876,8 +6876,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659c6d2d31bd6484fbe6e00005a2a0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  achievementid: 0
-  myname: 
+  achievementId: 0
+  myName: 
   rarity: normal
   acquired: 0
 --- !u!1 &1851370776
@@ -7059,8 +7059,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659c6d2d31bd6484fbe6e00005a2a0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  achievementid: 0
-  myname: 
+  achievementId: 0
+  myName: 
   rarity: normal
   acquired: 0
 --- !u!1 &1917991424
@@ -7357,8 +7357,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659c6d2d31bd6484fbe6e00005a2a0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  achievementid: 0
-  myname: 
+  achievementId: 0
+  myName: 
   rarity: normal
   acquired: 0
 --- !u!1 &1995469614
@@ -7889,8 +7889,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659c6d2d31bd6484fbe6e00005a2a0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  achievementid: 0
-  myname: 
+  achievementId: 0
+  myName: 
   rarity: normal
   acquired: 0
 --- !u!1 &2129297305

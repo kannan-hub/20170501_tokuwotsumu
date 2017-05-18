@@ -96,8 +96,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659c6d2d31bd6484fbe6e00005a2a0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  achievementid: 24
-  myname: SR_pizza
+  achievementId: 24
+  myName: 
   rarity: srare
   acquired: 0
 --- !u!212 &212219902944148110
