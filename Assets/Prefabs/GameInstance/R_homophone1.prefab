@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   achievementId: 13
-  myName: 
+  myName: R_homophone1
   rarity: rare
   acquired: 0
 --- !u!212 &212954209659765314

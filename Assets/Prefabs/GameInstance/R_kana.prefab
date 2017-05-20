@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   achievementId: 12
-  myName: 
+  myName: R_kana
   rarity: rare
   acquired: 0
 --- !u!212 &212472547276803728

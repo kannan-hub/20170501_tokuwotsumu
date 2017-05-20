@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   achievementId: 10
-  myName: 
+  myName: R_rock
   rarity: rare
   acquired: 0
 --- !u!212 &212683802072165240

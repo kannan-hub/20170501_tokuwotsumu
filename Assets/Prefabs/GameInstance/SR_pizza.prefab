@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   achievementId: 24
-  myName: 
+  myName: SR_pizza
   rarity: srare
   acquired: 0
 --- !u!212 &212219902944148110

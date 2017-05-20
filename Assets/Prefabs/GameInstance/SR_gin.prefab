@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   achievementId: 20
-  myName: 
+  myName: SR_gin
   rarity: srare
   acquired: 0
 --- !u!212 &212836185456155278

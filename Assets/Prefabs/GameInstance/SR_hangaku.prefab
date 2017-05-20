@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   achievementId: 23
-  myName: 
+  myName: SR_hangaku
   rarity: srare
   acquired: 0
 --- !u!212 &212531180417308144

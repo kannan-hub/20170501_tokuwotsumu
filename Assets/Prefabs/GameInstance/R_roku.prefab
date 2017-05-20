@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   achievementId: 15
-  myName: 
+  myName: R_roku
   rarity: rare
   acquired: 0
 --- !u!212 &212088482819356830
