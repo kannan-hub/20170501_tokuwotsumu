@@ -31,6 +31,8 @@ public class AchievementRepository :MonoBehaviour
 		Achievement saveAchievement = LoadAchievement ();
 
 		saveAchievement.recentScore = score;
+		saveAchievement.totalScore += score;
+
 		if ( score > saveAchievement.highScore )
 		{
 			saveAchievement.highScore = score;

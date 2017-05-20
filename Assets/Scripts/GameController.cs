@@ -94,6 +94,8 @@ public class GameController :MonoBehaviour
 			if(count > temp )
 			{
 				//popup achievement method
+
+
 				temp++;
 			}
 			yield return null;

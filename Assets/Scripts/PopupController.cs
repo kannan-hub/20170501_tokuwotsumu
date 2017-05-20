@@ -71,10 +71,12 @@ public class PopupController : MonoBehaviour {
 		AchievementPopupData target = readList [index];
 		titleText.text = target.title;
 
+		if ( !model.IsAchieved () && model.IsSecret () ) return;
+		detailText.text = target.detail;
+
 		if ( !model.IsAchieved () ) return;
 		achievementImg.sprite = spriteDic [target.imagename];
 		achievementImg.preserveAspect = true;
-		detailText.text = target.detail;
 
 		if ( target.moredetail == null ) return;
 		moreDetailText.text = target.moredetail;

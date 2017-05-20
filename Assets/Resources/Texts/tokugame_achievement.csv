@@ -16,11 +16,11 @@ id,title,imagename,detail,moredetail,use element of Achievement class
 15,3+3,R_roku,六を出現させた,,rareItemList
 16,なんて読むんだ？,R_nishitoku,開発者徳その1を出現させた,なんて書いたか本人に聞いてみよう！！https://twitter.com/WingRakhi,rareItemList
 17,汚い字だな！！,R_toritoku,開発者徳その2を出現させた,ごめんなさい,rareItemList
-18,運も実力,SR_dou,レジャンダリー徳をすべて出現させた,,rareItemList.Count
+18,運も実力,legendary,レジャンダリー徳をすべて出現させた,,rareItemList.Count
 19,ゴールドラッシュ,SR_kin,金の徳を出現させた,金で出来た徳。実はメッキなのですぐに剥がれる。,srareItemList
 20,燻銀,SR_gin,銀の徳を出現させた,銀で出来た徳。よく見ると所々錆びていて汚い,srareItemList
 21,第三位,SR_dou,銅の徳を出現させた,銅で出来た徳。福引のはずれ等で配られている。ゴミ。,srareItemList
 22,もっと安くならないの？,SR_2wari,2割引シールを出現させた,このシールが貼られていると20％引きされて“お得”に買い物できる。19時以降のスーパーでよく見られる,srareItemList
 23,今が買い時,SR_hangaku,半額シールを出現させた,このシールが貼られていると50％引きされて“お得”に買い物できる。お寿司に張ってあると嬉しい,srareItemList
 24,American Idiot,SR_pizza,ピザを出現させた,ピザ。美味しい。,srareItemList
-25,国宝級,SR_pizza,エピック徳をすべて出現させた,,srareItemList.Count
+25,国宝級,EPIC,エピック徳をすべて出現させた,,srareItemList.Count
