@@ -8,6 +8,8 @@ public class AchievementButtonModel : MonoBehaviour {
 	int id;
 	[SerializeField]
 	public bool achieved;
+	[SerializeField]
+	public bool secret;
 
 	public int GetId()
 	{
@@ -20,5 +22,10 @@ public class AchievementButtonModel : MonoBehaviour {
 	public void SetAchieved(bool logic )
 	{
 		achieved = logic;
+	}
+
+	public bool IsSecret()
+	{
+		return secret;
 	}
 }

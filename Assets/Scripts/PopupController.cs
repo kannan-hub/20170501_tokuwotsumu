@@ -15,13 +15,13 @@ public class PopupController : MonoBehaviour {
 		public string title { get; set; }
 
 		[CsvColumnAttribute (2, "NoImage")]
-		public string imageName { get; set; }
+		public string imagename { get; set; }
 
 		[CsvColumnAttribute (3, "NoDetail")]
 		public string detail { get; set; }
 
 		[CsvColumnAttribute(4, "")]
-		public string moreDetail { get; set; }
+		public string moredetail { get; set; }
 
 	}
 
@@ -71,13 +71,15 @@ public class PopupController : MonoBehaviour {
 		AchievementPopupData target = readList [index];
 		titleText.text = target.title;
 
-		if ( !model.IsAchieved () ) return;
-		achievementImg.sprite = spriteDic [target.imageName];
-		achievementImg.preserveAspect = true;
+		if ( !model.IsAchieved () && model.IsSecret () ) return;
 		detailText.text = target.detail;
 
-		if ( target.moreDetail == null ) return;
-		moreDetailText.text = target.moreDetail;
+		if ( !model.IsAchieved () ) return;
+		achievementImg.sprite = spriteDic [target.imagename];
+		achievementImg.preserveAspect = true;
+
+		if ( target.moredetail == null ) return;
+		moreDetailText.text = target.moredetail;
 	}
 
 }

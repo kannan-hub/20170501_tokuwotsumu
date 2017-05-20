@@ -112,8 +112,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659c6d2d31bd6484fbe6e00005a2a0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  achievementid: 14
-  myname: R_homophone2
+  achievementId: 14
+  myName: R_homophone2
   rarity: rare
   acquired: 0
 --- !u!212 &212079934852355584

@@ -89,8 +89,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659c6d2d31bd6484fbe6e00005a2a0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  achievementid: 22
-  myname: SR_2wari
+  achievementId: 22
+  myName: SR_2wari
   rarity: srare
   acquired: 0
 --- !u!212 &212892380213766406
