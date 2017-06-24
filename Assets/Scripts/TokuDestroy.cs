@@ -9,7 +9,7 @@ public class TokuDestroy : MonoBehaviour {
 
 	void OnTriggerEnter2D( Collider2D other )
 	{
-		if ( other.CompareTag ("Toku") )
+		if ( other.CompareTag ("Toku") || other.CompareTag("Ground") )
 		{
 			Destroy (other.gameObject);
 			other = null;

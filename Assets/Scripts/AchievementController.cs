@@ -16,6 +16,11 @@ public class AchievementController :MonoBehaviour
 	[SerializeField]
 	GameObject summaryView;
 
+	[SerializeField]
+	Text highScoreText;
+	[SerializeField]
+	Text totalScoreText;
+
 	void Awake()
 	{
 		listView.SetActive (true);
@@ -26,6 +31,7 @@ public class AchievementController :MonoBehaviour
 
 		List<int> achievedIdList = achieve.achievedIdList;
 		AssginTiles (achievedIdList);
+		SetSummary ();
 
 	}
 
@@ -38,6 +44,15 @@ public class AchievementController :MonoBehaviour
 			tile.transform.GetChild (1).gameObject.SetActive (false); //子供の2番目 hideImage をfalse にしている
 			tile.GetComponent<AchievementButtonModel> ().SetAchieved(true);
 		}
+	}
+
+	void SetSummary()
+	{
+		int highScore = achieve.highScore;
+		int totalScore = achieve.totalScore;
+
+		highScoreText.text = "HighScore: " + highScore.ToString ();
+		totalScoreText.text = "TotalScore: " + totalScore.ToString ();
 	}
 
 	public void EnableListView()

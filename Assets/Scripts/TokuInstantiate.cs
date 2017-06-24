@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TokuInstantiate :MonoBehaviour
 {
@@ -23,6 +24,8 @@ public class TokuInstantiate :MonoBehaviour
 	int rareRatio = 5;
 	[SerializeField]
 	int srareRatio = 1;
+	[SerializeField]
+	bool autoInstance = false;
 
 	const int instantiateRmin = 5;
 	const int instantiateRmax = 10;
@@ -35,12 +38,18 @@ public class TokuInstantiate :MonoBehaviour
 		cam = Camera.main;
 		tokuInstance = new List<GameObject> ();
 		foreach ( Transform child in tokuParents.transform ) tokuInstance.Add (child.gameObject);
-		tokuRareInstance = new List<GameObject> ();
-		foreach ( Transform rarechild in tokuRareParents.transform ) tokuRareInstance.Add (rarechild.gameObject);
-		tokuSRareInstance = new List<GameObject> ();
-		foreach ( Transform srarechild in tokuSRareParents.transform ) tokuSRareInstance.Add (srarechild.gameObject);
 
-		StartCoroutine ("InstantiateToku");
+		if ( SceneManager.GetActiveScene ().name == "main" )
+		{
+			tokuRareInstance = new List<GameObject> ();
+			foreach ( Transform rarechild in tokuRareParents.transform ) tokuRareInstance.Add (rarechild.gameObject);
+			tokuSRareInstance = new List<GameObject> ();
+			foreach ( Transform srarechild in tokuSRareParents.transform ) tokuSRareInstance.Add (srarechild.gameObject);
+			
+			StartCoroutine (InstantiateToku());
+		}
+
+		if (autoInstance) StartCoroutine(AutoInstanceToku());
 	}
 
 	IEnumerator InstantiateToku()
@@ -49,7 +58,7 @@ public class TokuInstantiate :MonoBehaviour
 		{
 			transform.position = MousePosition ();
 
-			if ( Input.GetMouseButtonDown (0) )
+			if ( Input.GetMouseButtonDown (0))
 			{
 				string rarity = TokuRarity ();
 				Vector2 instantiatePosition = InstantiateOffsetPosition ();
@@ -63,8 +72,6 @@ public class TokuInstantiate :MonoBehaviour
 
 			yield return null;
 		}
-
-		yield return null;
 	}
 
 	string TokuRarity()
@@ -156,5 +163,30 @@ public class TokuInstantiate :MonoBehaviour
 			gameCol.aquiredTokuAchievementIdList.Add (tm.GetId());
 		}
 		
+	}
+
+	IEnumerator AutoInstanceToku()
+	{
+		while (true)
+		{
+			List<GameObject> list = tokuInstance;
+			int count = list.Count;
+			int index = Random.Range (0, count);
+			Vector3 randPos = randPosition();
+			GameObject toku = Instantiate (list [index], randPos, Quaternion.identity);
+			toku.GetComponent<HingeJoint2D> ().breakForce = 0;
+			toku.gameObject.SetActive(true);
+		
+			yield return new WaitForSeconds(0.5f);
+		}
+	}
+
+	Vector3 randPosition()
+	{
+		float rand = Random.Range(-6, 6);
+		float posX = cam.orthographicSize / 6 * rand;
+		float posY = cam.orthographicSize * 0.8f;
+		
+		return new Vector3(posX, posY);
 	}
 }

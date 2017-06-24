@@ -23,8 +23,6 @@ public class GameController :MonoBehaviour
 	[SerializeField]
 	GameObject gameoverObj;
 	[SerializeField]
-	Text gameoverText;
-	[SerializeField]
 	Text resultText;
 	[SerializeField]
 	Text youText;
@@ -34,7 +32,7 @@ public class GameController :MonoBehaviour
 	[SerializeField] //メインのゲームシーンの名前を設定する
 	string sceneName = "main";
 	[SerializeField]
-	string [] kaimyo;
+	List<string> kaimyo;
 
 	AchievementRepository.Achievement achievementHistory;
 
@@ -62,8 +60,8 @@ public class GameController :MonoBehaviour
 			aquiredTokuAchievementIdList = achievementHistory.achievedIdList;
 
 			remainingTime = gameoverTime;
-			StartCoroutine ("GameControl");
-			StartCoroutine ("AchievementMonitor");
+			StartCoroutine (GameControl());
+			StartCoroutine (AchievementMonitor());
 		}
 	}
 
@@ -82,7 +80,6 @@ public class GameController :MonoBehaviour
 			yield return null;
 		}
 		GameOver ();
-		yield return null;
 	}
 
 	IEnumerator AchievementMonitor()
@@ -94,8 +91,6 @@ public class GameController :MonoBehaviour
 			if(count > temp )
 			{
 				//popup achievement method
-
-
 				temp++;
 			}
 			yield return null;
@@ -103,7 +98,6 @@ public class GameController :MonoBehaviour
 
 		AddAquiredAchievement ();
 		SaveGame ();
-		yield return null;
 	}
 
 	void AddAquiredAchievement()
@@ -181,8 +175,6 @@ public class GameController :MonoBehaviour
 		remainingTimeText.enabled = false;
 
 		gameoverObj.SetActive (true);
-
-		//SaveGame ();
 	}
 
 	void SaveGame()

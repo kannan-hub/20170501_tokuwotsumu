@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class AchievementRepository :MonoBehaviour
@@ -39,11 +41,12 @@ public class AchievementRepository :MonoBehaviour
 			saveAchievement.highScoreName = scoreName;
 		}
 
-		foreach(int id in tokuList )
+		foreach(int id in tokuList.Where(index => !saveAchievement.achievedIdList.Contains(index)))
 		{
 			saveAchievement.achievedIdList.Add (id);
 		}
 
+		SaveData.Remove ("p1");
 		SaveData.SetClass<Achievement> ("p1", saveAchievement);
 		SaveData.Save ();
 	}
