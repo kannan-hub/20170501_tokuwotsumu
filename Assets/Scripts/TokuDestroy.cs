@@ -2,18 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TokuDestroy : MonoBehaviour {
+public class TokuDestroy : MonoBehaviour
+{
+	[SerializeField] GameManager gameManager;
 
-	[SerializeField]
-	GameController gameCol;
-
-	void OnTriggerEnter2D( Collider2D other )
+	private void Start()
 	{
-		if ( other.CompareTag ("Toku") || other.CompareTag("Ground") )
+		gameManager = FindObjectOfType<GameManager>();
+	}
+
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.CompareTag("Toku") || other.CompareTag("Ground"))
 		{
-			Destroy (other.gameObject);
+			Destroy(other.gameObject);
 			other = null;
-			gameCol.score--;
+			gameManager.score--;
 		}
 	}
 }

@@ -4,9 +4,8 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public class AchievementRepository :MonoBehaviour
+public class AchievementRepository : MonoBehaviour
 {
-
 	[SerializeField]
 	public class Achievement
 	{
@@ -24,43 +23,41 @@ public class AchievementRepository :MonoBehaviour
 			highScoreName = "";
 			totalScore += recentScore;
 			totalTime = 0;
-			achievedIdList = new List<int> ();
+			achievedIdList = new List<int>();
 		}
 	}
 
-	public void SaveAchievement( int score, string scoreName, List<int> tokuList )
+	public void SaveAchievement(int score, string scoreName, List<int> tokuList)
 	{
-		Achievement saveAchievement = LoadAchievement ();
+		Achievement saveAchievement = LoadAchievement();
 
 		saveAchievement.recentScore = score;
 		saveAchievement.totalScore += score;
 
-		if ( score > saveAchievement.highScore )
+		if (score > saveAchievement.highScore)
 		{
 			saveAchievement.highScore = score;
 			saveAchievement.highScoreName = scoreName;
 		}
 
-		foreach(int id in tokuList.Where(index => !saveAchievement.achievedIdList.Contains(index)))
+		foreach (int id in tokuList.Where(index => !saveAchievement.achievedIdList.Contains(index)))
 		{
-			saveAchievement.achievedIdList.Add (id);
+			saveAchievement.achievedIdList.Add(id);
 		}
 
-		SaveData.Remove ("p1");
-		SaveData.SetClass<Achievement> ("p1", saveAchievement);
-		SaveData.Save ();
+		SaveData.Remove("p1");
+		SaveData.SetClass<Achievement>("p1", saveAchievement);
+		SaveData.Save();
 	}
 
 	public Achievement LoadAchievement()
 	{
-		return SaveData.GetClass<Achievement> ("p1", new Achievement ());
+		return SaveData.GetClass<Achievement>("p1", new Achievement());
 	}
 
 	public void ClearAchievement()
 	{
-		SaveData.Remove ("p1");
-		SaveData.SetClass<Achievement> ("p1", new Achievement());
-		SaveData.Save ();
+		SaveData.Remove("p1");
+		SaveData.Save();
 	}
-
 }
