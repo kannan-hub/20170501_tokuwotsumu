@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
+
 
 public class Tweet : MonoBehaviour {
 
@@ -14,7 +12,7 @@ public class Tweet : MonoBehaviour {
 
 	public void TweetResult(int score, string name)
 	{
-		tweetSentence = "徳を " + score.ToString() + " 積んで、「" + name + "」になりました。";
+		tweetSentence = "徳を " + score + " 積んで、「" + name + "」になりました。";
 
 		Application.OpenURL ("http://twitter.com/intent/tweet?text=" + WWW.EscapeURL (tweetSentence + space + hashtag + space + url));
 	}

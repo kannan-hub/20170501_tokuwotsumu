@@ -2,19 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CheckPopupController : MonoBehaviour {
-
-	public void CheckInput(bool logic )
+public class CheckPopupController : MonoBehaviour
+{
+	public void CheckInput(bool logic)
 	{
-		if ( logic ) ClearData ();
+		if (logic) ClearData();
 
-		Destroy (transform.root.gameObject);
+		Destroy(transform.root.gameObject);
 	}
 
 	void ClearData()
 	{
-		AchievementRepository arepos = FindObjectOfType<AchievementRepository> ();
-		arepos.ClearAchievement ();
+		AchievementRepository arepos = FindObjectOfType<AchievementRepository>();
+		arepos.ClearAchievement();
 	}
-
 }

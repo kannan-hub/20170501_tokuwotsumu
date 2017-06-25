@@ -13,6 +13,29 @@ public class TokuModel : MonoBehaviour {
 	[SerializeField]
 	bool acquired = false;
 
+	private void OnCollisionEnter2D(Collision2D other)
+	{
+		if (other.gameObject.CompareTag("Ground"))
+		{
+			gameObject.tag = "Ground";
+			//gameObject.layer = 0;
+
+			StartCoroutine(CheckSpeed());
+		}
+	}
+
+	IEnumerator CheckSpeed()
+	{
+		Rigidbody2D rb = GetComponent<Rigidbody2D>();
+		
+		yield return new WaitWhile(() => rb.velocity.magnitude > 0.05f);
+		yield return new WaitForSeconds(3.0f);
+		
+		rb.isKinematic = true;
+		rb.velocity = Vector2.zero;
+		rb.angularVelocity = 0f;
+	}
+
 	public int GetId()
 	{
 		return achievementId;
