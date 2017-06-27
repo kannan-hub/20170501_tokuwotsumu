@@ -71,8 +71,8 @@ public class GameController : MonoBehaviour
 
 		gameoverObj.SetActive(true);
 
-		gameManager.AddAquiredAchievement();
-		gameManager.SaveGame();
+//		gameManager.AddAquiredAchievement();
+//		gameManager.SaveGame();
 	}
 
 //	IEnumerator AchievementMonitor()
@@ -100,11 +100,23 @@ public class GameController : MonoBehaviour
 	
 	public void Tweet()
 	{
-		GetComponent<Tweet>().TweetResult(gameManager.score, gameManager.kaimyoResult);
+		gameManager.Tweet();
 	}
 
 	public void SetPlaySex(int num)
 	{
 		gameManager.sex = num;
+	}
+
+	public void OnClickDownload()
+	{
+		var url = "https://www.dropbox.com/s/f32nfu95s2cy8v9/%E5%BE%B3Simulator.zip?dl=0";
+#if UNITY_EDITOR
+		Application.OpenURL(url);
+#elif UNITY_WEBGL
+		Application.ExternalEval(string.Format("window.open('{0}','_blank')", url));
+#else
+		Application.OpenURL(url);
+#endif
 	}
 }

@@ -49,14 +49,14 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 	{
 		if (this != Instance)
 		{
-			Destroy(this);
+			Destroy(gameObject);
 			return;
 		}
 
 		DontDestroyOnLoad(gameObject);
 
-		achievementHistory = GetComponent<AchievementRepository>().LoadAchievement();
-		aquiredTokuAchievementIdList = achievementHistory.achievedIdList;
+//		achievementHistory = GetComponent<AchievementRepository>().LoadAchievement();
+//		aquiredTokuAchievementIdList = achievementHistory.achievedIdList;
 	}
 
 	public string GetKaimyoFromScore()
@@ -84,14 +84,14 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 		return KAIMYO_DIC[last][index] + KAIMYO_SUFFIX_DIC[last][sex];
 	}
 
-	public void AddAquiredAchievement()
-	{
-		CheckDoneGameAchievement();
-		CheckScoreAchievement();
-		CheckTotalScoreAchievement();
-		CheckCollectAllRareTokuAchievement();
-		CheckCollectAllSRareTokuAchievement();
-	}
+//	public void AddAquiredAchievement()
+//	{
+//		CheckDoneGameAchievement();
+//		CheckScoreAchievement();
+//		CheckTotalScoreAchievement();
+//		CheckCollectAllRareTokuAchievement();
+//		CheckCollectAllSRareTokuAchievement();
+//	}
 
 	void CheckDoneGameAchievement()
 	{
@@ -153,16 +153,20 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 		aquiredTokuAchievementIdList.Add(COLLECT_ALL_SRARE_TOKU_ACHIEVEMENT_ID);
 	}
 
-	public void SaveGame()
-	{
-		//kaimyoResult = GetKaimyoFromScore();
-		AchievementRepository arepos = GetComponent<AchievementRepository>();
-		arepos.SaveAchievement(score, kaimyoResult, aquiredTokuAchievementIdList);
-	}
+//	public void SaveGame()
+//	{
+//		AchievementRepository arepos = GetComponent<AchievementRepository>();
+//		arepos.SaveAchievement(score, kaimyoResult, aquiredTokuAchievementIdList);
+//	}
 
 	public void PopupCheckInput(GameObject obj)
 	{
 		GameObject instance = Instantiate(obj, transform.position, Quaternion.identity);
 		instance.SetActive(true);
+	}
+
+	public void Tweet()
+	{
+		GetComponent<Tweet>().TweetResult(score, kaimyoResult);
 	}
 }

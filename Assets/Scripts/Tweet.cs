@@ -14,7 +14,16 @@ public class Tweet : MonoBehaviour {
 	{
 		tweetSentence = "徳を " + score + " 積んで、「" + name + "」になりました。";
 
-		Application.OpenURL ("http://twitter.com/intent/tweet?text=" + WWW.EscapeURL (tweetSentence + space + hashtag + space + url));
+		var tweet = "http://twitter.com/intent/tweet?text=" + WWW.EscapeURL (tweetSentence + space + hashtag + space + url);
+		
+#if UNITY_EDITOR
+		Application.OpenURL(tweet);
+#elif UNITY_WEBGL
+		Application.ExternalEval(string.Format("window.open('{0}','_blank')", tweet));
+#else
+		Application.OpenURL(tweet);
+#endif
+		
 	}
 
 }
